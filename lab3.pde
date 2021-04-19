@@ -264,7 +264,7 @@ class SimulationThread implements Runnable{
       s.h_avatar.setSensor(true);
       s.h_avatar.setDamping(950);
       println("Congested");
-      fEE.y = random(-5, -1);;
+      fEE.y = random(-5, -1);
     }
     
     /* Touching Road Right: Rough */
