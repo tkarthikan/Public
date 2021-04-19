@@ -98,12 +98,6 @@ boolean           gameStart                           = false;
 PFont             f;
 
 
-float forceAngle = 0;
-float levelForce = 0;
-
-PVector posEELast = new PVector(0, 0);
-float limit = 0.02;
-
 /* end elements definition *********************************************************************************************/  
 
 
@@ -275,19 +269,6 @@ class SimulationThread implements Runnable{
       fEE.y = random(-2, 2);;
     }
     
-     //println("Rough");
-     //  PVector posDiff = (posEE.copy()).sub(posEELast);
-     //   posEELast.set(posEE);
-     //   if ((posDiff.mag()) < limit) { 
-     //     s.h_avatar.setDamping(800);
-     //     fEE.x = random(-2, 2);
-     //     fEE.y = random(-2, 2);
-     //   }
-      //s.h_avatar.setVelocity(70,0);
-  
-    //if(g1.isTouchingBody(c2) || g2.isTouchingBody(c2)){
-    //  gameStart = false;
-    //s.h_avatar.setSensor(true);
     
     torques.set(widgetOne.set_device_torques(fEE.array()));
     widgetOne.device_write_torques();
